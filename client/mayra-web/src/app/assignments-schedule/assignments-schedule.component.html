@@ -1,0 +1,26 @@
+@TODO I18 in dates
+
+<div *ngFor="let task of _tasks; let i = index;">
+  <div>
+    <table>
+      <tr>
+        <td class="task">
+          <div>{{ task.name }}</div>
+          <div>E: {{ task.estimated }}, R: {{ getRemainingAssignmentForTask(task) | number : '1.1-1' }}, B: {{ task.estimated }}</div>
+        </td>
+        <td>
+          <table>
+            <tr *ngIf="i == 0">
+              <td class="user">Users</td>
+              <td *ngFor="let date of dates" class="date">{{ date }}</td>
+            </tr>
+            <tr *ngFor="let user of _users">
+              <td class="user">{{user.name}}</td>
+              <td *ngFor="let date of dates" class="assignment"><input type="text" class="assignment" maxlength="2" [(ngModel)]="_assignments[date][task.id][user.id]"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

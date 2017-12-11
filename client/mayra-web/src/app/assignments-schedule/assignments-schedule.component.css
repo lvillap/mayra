@@ -1,0 +1,23 @@
+.date {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  height: 2em;
+  min-width: 2em;
+  max-width: 2em;
+}
+.assignment {
+  max-width: 2em;
+  min-width: 2em;
+  text-align: center;
+}
+.task {
+  max-width: 15em;
+  min-width: 15em;
+}
+.user {
+  max-width: 6em;
+  min-width: 6em;
+}
