@@ -1,0 +1,7 @@
+<div class="task">
+  <div class="title">{{ model.name }}</div>
+  <div class="description">{{ model.description }}</div>
+  <div class="subtasks" *ngIf="model.subtasks.length">
+    <div class="subtask" *ngFor="let subtask of model.subtasks">{{ subtask.name }}</div>
+  </div>
+</div>

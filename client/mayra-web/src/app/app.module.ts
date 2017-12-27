@@ -9,8 +9,11 @@ import { ProjectsComponent } from './projects/projects.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AssignmentsScheduleComponent } from './assignments-schedule/assignments-schedule.component';
 import { AssignmentsPageComponent } from './assignments-page/assignments-page.component';
+import { TaskComponent } from './task/task.component';
+import { TaskPageComponent } from './task-page/task-page.component';
 
 const appRoutes: Routes = [
+  { path: 'tasks', component: TaskPageComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'assignments', component: AssignmentsPageComponent },
   { path: '', component: WelcomeComponent, pathMatch: 'full' },
@@ -24,7 +27,9 @@ const appRoutes: Routes = [
     ProjectsComponent,
     PageNotFoundComponent,
     AssignmentsScheduleComponent,
-    AssignmentsPageComponent
+    AssignmentsPageComponent,
+    TaskComponent,
+    TaskPageComponent
   ],
   imports: [
     BrowserModule,
